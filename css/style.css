@@ -7,6 +7,8 @@
 	--color-primary: #fff;
 	--color-bg: #f7f7f7;
 	--color-book: #F2F6FF;
+	--color-bgrelax: #fcddec;
+	--color-bgadvent: #f1f1fd;
 	--color-btn: rgba(62, 134, 245, 0.8);
 
 
@@ -14,8 +16,9 @@
 	--color-headertext: #fff;
 	--color-title: #000;
 	--color-text: rgba(0, 0, 0, 0.5);
-	--color-textinfo: #f178b6;
-	--color-bginfo: #fcddec;
+	--color-textrelax: #f178b6;
+	--color-textadvent: #7879f1;
+
 
 }
 
@@ -418,11 +421,11 @@ margin: calc(20px + (50 - 20) * ((100vw - 320 px) / (1200 - 320))); */
 
 .card__show {
 	display: flex;
-	margin-bottom: 1.8rem;
 }
 
 .card__img {
 	border-radius: 50px;
+	margin-bottom: 1.8rem;
 }
 
 .card__date {
@@ -453,11 +456,16 @@ margin: calc(20px + (50 - 20) * ((100vw - 320 px) / (1200 - 320))); */
 
 .card__type {
 	display: inline-block;
-	background-color: var(--color-bginfo);
+	background-color: var(--color-bgrelax);
 	border-radius: 100px;
-	color: var(--color-textinfo);
+	color: var(--color-textrelax);
 	padding: 0 1.6rem;
 	margin-right: 1.2rem;
+}
+
+.card__type--advent {
+	background: var(--color-bgadvent);
+	color: var(--color-textadvent);
 }
 
 .card__duration {
@@ -538,13 +546,13 @@ margin: calc(20px + (50 - 20) * ((100vw - 320 px) / (1200 - 320))); */
 }
 
 .about__badge--top {
-top: 5%;
-left: calc(100% - 17.4rem / 2.2);
+	top: 5%;
+	left: calc(100% - 17.4rem / 2.2);
 }
 
 .about__badge--bottom {
-top: 68%;
-left: calc(100% - 17.4rem / 2.2);
+	top: 68%;
+	left: calc(100% - 17.4rem / 2.2);
 }
 
 .about__content {
@@ -562,7 +570,7 @@ left: calc(100% - 17.4rem / 2.2);
 	margin-bottom: 2.7rem;
 }
 
-.about__text p:first-child {
+.about__text p {
 	margin-bottom: 4rem;
 }
 
@@ -582,4 +590,100 @@ left: calc(100% - 17.4rem / 2.2);
 
 .about__btn:hover {
 	background: var(--color-accent);
+}
+
+/* section-destination */
+
+.destination {
+	padding: 12rem 0;
+	text-align: center;
+}
+
+.destination__title {
+	margin-bottom: 3rem;
+}
+
+.tabs--opacity {
+	background: transparent;
+	box-shadow: none;
+	border: none;
+}
+
+.tabs--opacity .tabs__item--active {
+	background: var(--color-primary);
+	color: var(--color-accent);
+}
+
+.tabs--opacity .tabs__item {
+	font-weight: 600;
+}
+
+.destination__cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 8rem;
+}
+
+.card--destination {
+	padding: 1rem 1rem 0;
+	border-radius: 25px;
+	box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.1);
+	margin: 1rem;
+}
+
+.card--destination img {
+	margin-bottom: 2rem;
+}
+
+.card__content {
+	text-align: left;
+	padding-left: 2rem;
+}
+
+.card__content .card__title {
+	margin-bottom: 0.5rem;
+}
+
+.card__location {
+	display: flex;
+	font-weight: 500;
+	font-size: 1.4rem;
+}
+
+.card--destination .card__show {
+	position: relative;
+}
+
+.card__img {
+	border-radius: 25px;
+}
+
+.card__badge {
+	position: absolute;
+	top: 1.4rem;
+	right: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 5.5rem;
+	height: 2rem;
+	font-weight: 500;
+	font-size: 1.2rem;
+	color: var(--color-title);
+	background: var(--color-primary);
+	border-radius: 25px;
+	position: absolute;
+}
+
+.card__badge img {
+	margin-bottom: 0;
+	margin-right: 0.2rem;
+}
+
+.card__badge p {
+	display: inline-block;
+}
+
+.destination__cards > .card--destination {
 }
